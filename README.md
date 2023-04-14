@@ -1,6 +1,6 @@
 # iiwa_pubsub_practice
 
-idk what to put here.
+ROS Node that converts iiwa_msgs/JointPositions to sensor_msgs/JointStates format
 
-Clone This!
+Dependencies: 
 https://github.com/IFL-CAMP/iiwa_stack
