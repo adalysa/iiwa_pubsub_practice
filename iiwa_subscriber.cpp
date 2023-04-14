@@ -11,13 +11,10 @@ void iiwa_pub_simCallback(const iiwa_msgs::JointPosition::ConstPtr &msg){
 
     j.header = msg->header;
 
-    j.name.push_back("iiwa_joint_1");
-    j.name.push_back("iiwa_joint_2");
-    j.name.push_back("iiwa_joint_3");
-    j.name.push_back("iiwa_joint_4");
-    j.name.push_back("iiwa_joint_5");
-    j.name.push_back("iiwa_joint_6");
-    j.name.push_back("iiwa_joint_7");
+    // This loop puts strings into sensor_msgs/JointState name vector
+    for (int i = 1; i <= 7 ; i++){
+        j.name.push_back("iiwa_joint_" + std::to_string(i));
+    }
 
     j.position.push_back(msg->position.a1);
     j.position.push_back(msg->position.a2);
