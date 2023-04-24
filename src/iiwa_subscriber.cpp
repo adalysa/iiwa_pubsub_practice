@@ -33,7 +33,7 @@ int main(int argc, char **argv){
 
     ros::NodeHandle n;
 
-    ros::Subscriber sub = n.subscribe("iiwa_msgs_topic", 1000, iiwa_pub_simCallback);
+    ros::Subscriber sub = n.subscribe("iiwa/state/JointPosition", 1000, iiwa_pub_simCallback);
 
     pub = n.advertise<sensor_msgs::JointState>("/iiwa/joint_states", 10);
 
